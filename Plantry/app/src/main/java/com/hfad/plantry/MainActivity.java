@@ -1,7 +1,7 @@
 package com.hfad.plantry;
 
 import androidx.appcompat.app.AppCompatActivity;
-import java.util.*;
+import java.util.Scanner;
 import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {
