@@ -1,4 +1,0 @@
-com/hfad/plantry/BuildConfig.java
- com.hfad.plantry.BuildConfig
-com/hfad/plantry/MainActivity.java
- com.hfad.plantry.MainActivity
