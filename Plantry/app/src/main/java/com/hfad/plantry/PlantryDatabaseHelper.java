@@ -5,6 +5,8 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import java.sql.Time;
+
 public class PlantryDatabaseHelper extends SQLiteOpenHelper {
     private static final String DB_NAME = "plantry";
     private static final int DB_VERSION = 2;
@@ -21,18 +23,10 @@ public class PlantryDatabaseHelper extends SQLiteOpenHelper {
     private void updateMyDatabase(SQLiteDatabase db, int oldVersion, int newVersion) {
         if (oldVersion < 1) {
             db.execSQL("Create Table RECIPE (" + "_id INTEGER PRIMARY KEY AUTOINCREMENT," + " NAME TEXT,"+"STEPS TEXT," + "LEVEL TEXT," + "TIME TIME);"); //this creates the RECIPE table
-            db.execSQL("Create Table RECIPEITEMS (" + "RECIPE_ID INTEGER," + " NAME TEXT," + "WEIGHT INTEGER, "+"FOREIGN KEY(RECIPE_ID) REFERENCES RECIPE(_id));"); //this creates the RECIPE table
+            db.execSQL("Create Table RECIPEITEMS (" + "RECIPE_ID INTEGER," + " NAME TEXT," + "WEIGHT INTEGER," + "TYPE TEXT, "+"FOREIGN KEY(RECIPE_ID) REFERENCES RECIPE(_id));"); //this creates the RECIPE table
 
 
-            insertDrink(db, "Latte", "Espresso and steamed milk", R.drawable.latte);
-            insertDrink(db, "Cappuccino", "Espresso, hot milk and steamed-milk foam", R.drawable.cappuccino);
-            insertDrink(db, "Filter", "Our best drip coffee", R.drawable.filter);
 
-            db.execSQL("Create Table FOOD (" + "_id INTEGER PRIMARY KEY AUTOINCREMENT," + " NAME TEXT," + "DESCRIPTION TEXT," + "IMAGE_RESOURCE_ID INTEGER);"); //this creates the DRINK table
-
-            insertFood(db, "Pizza", "Cheese and red sauce", R.drawable.pizza);
-            insertFood(db, "Pasta", "Meatballs and marinara sauce", R.drawable.pasta);
-            insertFood(db, "Chicken Parmesan", "Parmesan cheese and marinara sauce on chicken cutlet", R.drawable.chicken_parmesan);
         }
 
     }
@@ -47,20 +41,22 @@ public class PlantryDatabaseHelper extends SQLiteOpenHelper {
 
     }
 
-    private static void insertDrink(SQLiteDatabase db, String name, String description, int resourceId) { //this method is used to insert several drinks
-        ContentValues drinkValues = new ContentValues();
-        drinkValues.put("NAME", name);
-        drinkValues.put("DESCRIPTION", description);
-        drinkValues.put("IMAGE_RESOURCE_ID", resourceId);
-        db.insert("DRINK", null, drinkValues);
+    private static void insertRecipe(SQLiteDatabase db, String name, String steps, String level, Time time) { //this method is used to insert several drinks
+        ContentValues recipeValues = new ContentValues();
+        recipeValues.put("NAME", name);
+        recipeValues.put("STEPS", steps);
+        recipeValues.put("LEVEL", level);
+        recipeValues.put("TIME", time.toString());
+        db.insert("RECIPE", null, recipeValues);
     }
 
-    private static void insertFood(SQLiteDatabase db, String name, String description, int resourceId) { //this method is used to insert several drinks
-        ContentValues foodValues = new ContentValues();
-        foodValues.put("NAME", name);
-        foodValues.put("DESCRIPTION", description);
-        foodValues.put("IMAGE_RESOURCE_ID", resourceId);
-        db.insert("FOOD", null, foodValues);
+    private static void insertRecipeItem(SQLiteDatabase db, int recipe_id, String name, int weight, String type) { //this method is used to insert several drinks
+        ContentValues recipeItemValues = new ContentValues();
+        recipeItemValues.put("RECIPE_ID", recipe_id);
+        recipeItemValues.put("NAME", name);
+        recipeItemValues.put("WEIGHT", weight);
+        recipeItemValues.put("TYPE", type);
+        db.insert("RECIPEITEMS", null, recipeItemValues);
     }
 
 }
