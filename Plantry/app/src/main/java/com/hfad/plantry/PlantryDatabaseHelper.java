@@ -26,8 +26,57 @@ public class PlantryDatabaseHelper extends SQLiteOpenHelper {
             db.execSQL("Create Table RECIPEITEMS (" + "RECIPE_ID INTEGER," + " NAME TEXT," + "WEIGHT DOUBLE," + "TYPE TEXT, "+"FOREIGN KEY(RECIPE_ID) REFERENCES RECIPE(_id));"); //this creates the RECIPEITEMS table
             String DD = String.valueOf(R.string.Deep_Dish);
             insertRecipe(db,"Chicago-Style Deep Dish Pizza with Italian Sausage",String.valueOf(R.string.Deep_Dish),"MEDIUM","02:55:00");
+            insertRecipeItem(db, 1, "Flour", 16, "ounces");
+            insertRecipeItem(db, 1, "Yellow Cornmeal", 1, "ounces");
+            insertRecipeItem(db, 1, "Salt", 0.167, "teaspoon");
+            insertRecipeItem(db, 1, "Instant Yeast", 0.167, "teaspoon");
+            insertRecipeItem(db, 1, "Sugar", 0.334, "teaspoon");
+            insertRecipeItem(db, 1, "Olive Oil", 0.167, "teaspoon");
+            insertRecipeItem(db, 1, "Butter", 1.5, "tablespoon");
+            insertRecipeItem(db, 1, "Italian Sausage", 16, "ounces");
+            insertRecipeItem(db, 1, "Mozzarella Cheese", 8, "ounces");
+            insertRecipeItem(db, 1, "Parmesan", 2, "ounces");
+            insertRecipeItem(db, 1, "Onion", 6, "ounces");
+            insertRecipeItem(db, 1, "Garlic", 0.5, "tablespoon");
+            insertRecipeItem(db, 1, "Oregano", 0.334, "teaspoon");
+            insertRecipeItem(db, 1, "Dried Rosemary", 0.167, "teaspoon");
+            insertRecipeItem(db, 1, "Crushed Tomatoes", 25, "ounces");
 
+            insertRecipe(db,"Best Beef Chili",String.valueOf(R.string.Beef_Chili),"MEDIUM","01:45:00");
+            insertRecipeItem(db, 2, "Olive Oil", 1, "ounces");
+            insertRecipeItem(db, 2, "Onion", 12, "ounces");
+            insertRecipeItem(db, 2, "Garlic", 0.5, "tablespoon");
+            insertRecipeItem(db, 2, "Ground Beef", 32, "ounces");
+            insertRecipeItem(db, 2, "Salt", 0.167, "teaspoon");
+            insertRecipeItem(db, 2, "Chili Powder", 0.5, "tablespoon");
+            insertRecipeItem(db, 2, "Chipotle Chili Powder", 0.0416667, "teaspoon");
+            insertRecipeItem(db, 2, "Ground Cumin", 0.5, "tablespoon");
+            insertRecipeItem(db, 2, "Oregano", 0.334, "teaspoon");
+            insertRecipeItem(db, 2, "Sweet Bell Peppers", 16, "ounces");
+            insertRecipeItem(db, 2, "Whole Peeled Tomato", 28, "ounces");
+            insertRecipeItem(db, 2, "Water", 16, "ounces");
+            insertRecipeItem(db, 2, "Black Beans", 30, "ounces");
+            insertRecipeItem(db, 2, "Corn Kernels", 8, "ounces");
 
+            insertRecipe(db,"Feijoada, Brazilian Black Bean Stew",String.valueOf(R.string.Feijoada),"HARD","05:10:00");
+            insertRecipeItem(db, 3, "Dry Black Beans", 16, "ounces");
+            insertRecipeItem(db, 3, "Olive Oil", 2, "tablespoon");
+            insertRecipeItem(db, 3, "Pork Shoulder", 16, "ounces");
+            insertRecipeItem(db, 3, "Onion", 12, "ounces");
+            insertRecipeItem(db, 3, "Garlic", 0.5, "tablespoon");
+            insertRecipeItem(db, 3, "Corned Beef", 16, "ounces");
+            insertRecipeItem(db, 3, "Kielbasa", 8, "ounces");
+            insertRecipeItem(db, 3, "Ham Hock", 7, "ounces");
+            insertRecipeItem(db, 3, "Bay Leaves", 2, "ounces");
+            insertRecipeItem(db, 3, "Crushed Tomatoes", 14, "ounces");
+            insertRecipeItem(db, 3, "Salt", 0.334, "teaspoon");
+
+            insertRecipe(db,"Spaghetti and Meatballs",String.valueOf(R.string.Spaghetti_Meatball),"EASY","01:00:00");
+            insertRecipeItem(db, 4, "Olive Oil", 1, "ounces");
+            insertRecipeItem(db, 4, "Onion", 4, "ounces");
+            insertRecipeItem(db, 4, "Garlic", 0.5, "tablespoon");
+            insertRecipeItem(db, 4, "Carrots", 8, "ounces");
+            insertRecipeItem(db, 4, "Brown Mushroom", 8, "ounces");
 
         }
 

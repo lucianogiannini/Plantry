@@ -20,4 +20,52 @@ On a lightly floured surface, roll the dough into a 12-inch circle. Fit it into 
 Bake the pizza:
 Bake for about 25 minutes, or until the crust browns and the filling is bubbly. Remove from the oven and let rest for 10 minutes to allow the sauce to settle before gently removing it from the pan in one piece, or slice and serve it from the pan. To remove in one piece, run a knife around the circumference of the pan. Carefully slide a wide, thin spatula under the dough and lift it out of the pan. Transfer it to a large plate.
 </string>
+
+    <string name="Beef_Chili">
+        Cook the onions, garlic, and beef:
+In a large, heavy-bottomed pot over medium heat, heat the oil. Add the onions and garlic and cook, stirring often, for 6 minutes, or until the onions soften. Add the beef and salt. Cook, breaking the meat up with a potato masher or the edge of a spoon, for 5 minutes, or until it is no longer pink.
+Add the spices and peppers:
+Add the ancho and chipotle powders, cumin, and oregano to the pot. Cook, stirring, for 1 minute. Stir in the bell peppers.
+Purée and add the tomatoes:
+
+In a blender, pulse the tomatoes and their juices for 5 seconds to break them up. Add them to the pot with the water and bring to a boil.
+Cook the chili:
+Lower the heat and simmer for a minimum of 45 minutes or up to 1 1/2 hours, or until the liquid is well flavored (the longer the better!). Add more hot water during cooking, 1/2 cup at a time, if the mixture seems too thick.
+Add the beans and corn:
+Add the beans and corn and cook, stirring, for 5 minutes, or until hot. Taste and add more salt or chili powder, if you like.
+Serve with garnishes:
+Set out bowls of your favorite garnishes for serving. This chili keeps for about a week, covered, in the refrigerator and up to 3 months when frozen.
+
+    </string>
+
+    <string name="Feijoada">
+        Soak beans in hot water
+Pour boiling water over the black beans and let them sit while you prepare the rest of the stew.
+Brown the pork shoulder
+Heat the olive oil in a large pot over medium-high heat and brown the pork shoulder. When the meat has browned, remove the meat from the pot, set it aside.
+Brown the onions, add garlic
+Add the onions to the pot. Brown them, stirring occasionally, scraping up any browned bits from the bottom of the pot. Sprinkle a little salt over the onions and add the garlic. Stir well and sauté 2 more minutes.
+Add meat, bay leaves, cover with water, simmer
+Add back the pork shoulder, and the other meats and add enough water to cover. Add the bay leaves, cover, and bring to a simmer. Cook gently for 1 hour.
+Add soaked black beans, simmer
+Drain the black beans from their soaking liquid and add them to the stew. Simmer gently, covered, until the beans are tender, about an hour and a half.
+Add tomatoes and simmer
+Add the tomatoes, stir well and taste for salt, adding if it's needed. Simmer this, uncovered, until the meat begins to fall off the ham hock, which will probably take 2-3 hours. Serve with white rice and hot sauce.
+
+    </string>
+
+    <string name = "Spaghetti_Meatball">
+        Heat olive oil in 4 to 5 quart pot on medium-high heat. Add onions and cook for 2 minutes. Add garlic and cook for 30 seconds longer or until fragrant. Add the carrots and mushrooms, and cook for 2 minutes. Add the tomato paste concentrate, stir to blend, and cook for a minute longer. Add the canned tomatoes, basil, and parsley. Mash and stir the tomatoes with a potato masher until the sauce starts to thicken, about 5 minutes over medium high heat. Reduce heat to low and simmer gently while preparing meatballs, stirring occasionally.
+Form the meatballs:
+In a large bowl, mix by hand the beef, Italian sausage, basil, parsley, mushrooms, eggs, breadcrumbs, cheese, salt, and pepper. Do not over-mix or the meatballs will be tough. Use small melon baller (or teaspoon) to form 1-inch round meatballs. Roll and compress into tight balls.
+Brown the meatballs:
+In a separate wide, shallow pan, heat the olive oil on medium high heat. Brown meat balls on all sides, about 2 to 3 minutes. Depending on pan size you may need to brown two batches of the meatballs. Cook them in a single layer; do not crowd the pan by stacking them. Do not overcook the meatballs; they will continue to cook in the sauce. You just want to brown them on all sides. Towards the end of browning the meatballs, add a little bit of red wine to deglaze the pan.
+Finish and simmer the sauce:
+Add the red wine to the sauce and stir in the cheese. Add salt to taste. Add meatballs and gently stir. Simmer the sauce and meatballs for 30 to 45 minutes, stirring occasionally.
+Cook the spaghetti:
+While the sauce is simmering, bring a large pot with 4 quarts of salted water in it to a boil (1 tablespoon of salt for every 2 quarts of water). When the water returns to a boil add the pasta to the pot. Leave the pot uncovered while you cook the pasta on high heat with a vigorous boil. Put a timer on for 8 to 10 minutes, or according to package directions for al dente pasta (cooked but still a little firm). Drain.
+Serve:
+To serve, place thin layer of sauce on plate, add pasta, add sauce and meatballs, and then sprinkle with grated Parmesan-Romano cheese.
+
+    </string>
 </resources>
