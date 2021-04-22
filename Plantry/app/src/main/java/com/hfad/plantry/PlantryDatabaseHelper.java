@@ -20,7 +20,9 @@ public class PlantryDatabaseHelper extends SQLiteOpenHelper {
 
     private void updateMyDatabase(SQLiteDatabase db, int oldVersion, int newVersion) {
         if (oldVersion < 1) {
-            db.execSQL("Create Table RECIEPE (" + "_id INTEGER PRIMARY KEY AUTOINCREMENT," + " NAME TEXT," + "LEVEL TEXT," + "TIME TIME);"); //this creates the DRINK table
+            db.execSQL("Create Table RECIPE (" + "_id INTEGER PRIMARY KEY AUTOINCREMENT," + " NAME TEXT,"+"STEPS TEXT," + "LEVEL TEXT," + "TIME TIME);"); //this creates the RECIPE table
+            db.execSQL("Create Table RECIPEITEMS (" + "RECIPE_ID INTEGER," + " NAME TEXT," + "WEIGHT INTEGER, "+"FOREIGN KEY(RECIPE_ID) REFERENCES RECIPE(_id));"); //this creates the RECIPE table
+
 
             insertDrink(db, "Latte", "Espresso and steamed milk", R.drawable.latte);
             insertDrink(db, "Cappuccino", "Espresso, hot milk and steamed-milk foam", R.drawable.cappuccino);
