@@ -23,7 +23,7 @@ public class PlantryDatabaseHelper extends SQLiteOpenHelper {
     private void updateMyDatabase(SQLiteDatabase db, int oldVersion, int newVersion) {
         if (oldVersion < 1) {
             db.execSQL("Create Table RECIPE (" + "_id INTEGER PRIMARY KEY AUTOINCREMENT," + " NAME TEXT,"+"STEPS TEXT," + "LEVEL TEXT," + "TIME TIME);"); //this creates the RECIPE table
-            db.execSQL("Create Table RECIPEITEMS (" + "RECIPE_ID INTEGER," + " NAME TEXT," + "WEIGHT INTEGER," + "TYPE TEXT, "+"FOREIGN KEY(RECIPE_ID) REFERENCES RECIPE(_id));"); //this creates the RECIPE table
+            db.execSQL("Create Table RECIPEITEMS (" + "RECIPE_ID INTEGER," + " NAME TEXT," + "WEIGHT DOUBLE," + "TYPE TEXT, "+"FOREIGN KEY(RECIPE_ID) REFERENCES RECIPE(_id));"); //this creates the RECIPE table
 
 
 
@@ -50,7 +50,7 @@ public class PlantryDatabaseHelper extends SQLiteOpenHelper {
         db.insert("RECIPE", null, recipeValues);
     }
 
-    private static void insertRecipeItem(SQLiteDatabase db, int recipe_id, String name, int weight, String type) { //this method is used to insert several drinks
+    private static void insertRecipeItem(SQLiteDatabase db, int recipe_id, String name, double weight, String type) { //this method is used to insert several drinks
         ContentValues recipeItemValues = new ContentValues();
         recipeItemValues.put("RECIPE_ID", recipe_id);
         recipeItemValues.put("NAME", name);
