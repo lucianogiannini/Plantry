@@ -22,8 +22,10 @@ public class PlantryDatabaseHelper extends SQLiteOpenHelper {
 
     private void updateMyDatabase(SQLiteDatabase db, int oldVersion, int newVersion) {
         if (oldVersion < 1) {
-            db.execSQL("Create Table RECIPE (" + "_id INTEGER PRIMARY KEY AUTOINCREMENT," + " NAME TEXT,"+"STEPS TEXT," + "LEVEL TEXT," + "TIME TIME);"); //this creates the RECIPE table
-            db.execSQL("Create Table RECIPEITEMS (" + "RECIPE_ID INTEGER," + " NAME TEXT," + "WEIGHT DOUBLE," + "TYPE TEXT, "+"FOREIGN KEY(RECIPE_ID) REFERENCES RECIPE(_id));"); //this creates the RECIPE table
+            db.execSQL("Create Table RECIPE (" + "_id INTEGER PRIMARY KEY AUTOINCREMENT," + " NAME TEXT,"+"STEPS TEXT," + "LEVEL TEXT," + "TIME TEXT);"); //this creates the RECIPE table
+            db.execSQL("Create Table RECIPEITEMS (" + "RECIPE_ID INTEGER," + " NAME TEXT," + "WEIGHT DOUBLE," + "TYPE TEXT, "+"FOREIGN KEY(RECIPE_ID) REFERENCES RECIPE(_id));"); //this creates the RECIPEITEMS table
+            String DD = String.valueOf(R.string.Deep_Dish);
+            insertRecipe(db,"Chicago-Style Deep Dish Pizza with Italian Sausage",String.valueOf(R.string.Deep_Dish),"MEDIUM","02:55:00");
 
 
 
@@ -41,12 +43,12 @@ public class PlantryDatabaseHelper extends SQLiteOpenHelper {
 
     }
 
-    private static void insertRecipe(SQLiteDatabase db, String name, String steps, String level, Time time) { //this method is used to insert several drinks
+    private static void insertRecipe(SQLiteDatabase db, String name, String steps, String level, String time) { //this method is used to insert several drinks
         ContentValues recipeValues = new ContentValues();
         recipeValues.put("NAME", name);
         recipeValues.put("STEPS", steps);
         recipeValues.put("LEVEL", level);
-        recipeValues.put("TIME", time.toString());
+        recipeValues.put("TIME", time);
         db.insert("RECIPE", null, recipeValues);
     }
 
