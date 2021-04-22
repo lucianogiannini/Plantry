@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">Plantry</string>
+    <string name="pantry">Your Pantry</string>
+    <string name="add_recipe">Add Your Recipe</string>
     <string name="Deep_Dish">Mix the dough:
 
 In the bowl of a stand mixer fitted with the paddle attachment on low speed, mix the flour, cornmeal, salt, yeast, and sugar until blended. Add 1/2 cup plus 2 tablespoons of room temperature water and mix until combined. If the dough seems dry, add an additional tablespoon or two of water. The dough should feel soft and very slightly sticky, not stiff or dry.
