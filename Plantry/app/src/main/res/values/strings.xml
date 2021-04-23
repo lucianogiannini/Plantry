@@ -79,7 +79,7 @@ To serve, place thin layer of sauce on plate, add pasta, add sauce and meatballs
 
     </string>
 
-    <string name = "Arugula_Salad">
+    <string name="Arugula_Salad">
         Start
 * To roast beets, scrub raw beets clean, coat with a little olive oil, wrap in aluminum foil, and roast in 400°F oven for 1 to 2 hours, until fork tender
 ** To boil beets, scrub raw beets clean, put in small pot, cover with water, bring to a boil, reduce to a simmer, cover, and cook for 45 min to an hour, until fork tender
@@ -92,7 +92,7 @@ Drizzle the salad with vinaigrette:
 
     </string>
 
-    <string name = "Shepherds_Pie">
+    <string name="Shepherds_Pie">
         Boil the potatoes:
 Place the peeled and quartered potatoes in medium sized pot. Cover with at least an inch of cold water. Add a teaspoon of salt. Bring to a boil, reduce to a simmer, and cook until tender (about 20 minutes).
 Sauté vegetables:
