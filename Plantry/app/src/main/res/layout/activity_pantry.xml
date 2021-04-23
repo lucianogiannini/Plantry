@@ -1,11 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PantryActivity">
+    tools:context=".PantryActivity"
+    android:background="@color/black"
+    android:id="@+id/linearLayout"
+    android:padding="16dp"
+    android:orientation="vertical" >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="82dp"
+            android:layout_height="75dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/pantry_icon"
+            app:layout_constraintEnd_toStartOf="@+id/your_pantry_textview"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/your_pantry_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:text="Your Pantry"
+            android:textColor="@color/green"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toStartOf="@+id/imageView1"
+            app:layout_constraintHorizontal_bias="0.812"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="84dp"
+            android:layout_height="77dp"
+            android:layout_marginStart="16dp"
+            android:src="@drawable/pantry_icon1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/your_pantry_textview"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:entries="@array/recipe_list"
+        android:background="@color/green"
+        android:clickable="true"/>
+
+</LinearLayout>
 
 
-</androidx.core.widget.NestedScrollView>
+
