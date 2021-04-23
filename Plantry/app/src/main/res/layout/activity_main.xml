@@ -116,6 +116,7 @@
             android:layout_gravity="left"
             android:gravity="left|top"
             android:text="temp-items"
+            android:onClick="goToRecipe"
             android:tag="1"/>
         <TextView
             android:id="@+id/recipe_2_textview"
@@ -132,6 +133,7 @@
             android:layout_gravity="left"
             android:gravity="left|top"
             android:text="temp-items"
+            android:onClick="goToRecipe"
             android:tag="2"/>
         <TextView
             android:id="@+id/recipe_3_textview"
@@ -148,6 +150,7 @@
             android:layout_gravity="left"
             android:gravity="left|top"
             android:text="temp-items"
+            android:onClick="goToRecipe"
             android:tag="3"/>
         <TextView
             android:id="@+id/recipe_4_textview"
@@ -164,6 +167,7 @@
             android:layout_gravity="left"
             android:gravity="left|top"
             android:text="temp-items"
+            android:onClick="goToRecipe"
             android:tag="4"/>
         <TextView
             android:id="@+id/recipe_5_textview"
@@ -180,6 +184,7 @@
             android:layout_gravity="left"
             android:gravity="left|top"
             android:text="temp-items"
+            android:onClick="goToRecipe"
             android:tag="5"/>
         <TextView
             android:id="@+id/recipe_6_textview"
@@ -195,6 +200,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="left"
             android:gravity="left|top"
+            android:onClick="goToRecipe"
             android:text="temp-items"
             android:tag="6"/>
     </LinearLayout>
