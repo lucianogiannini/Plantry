@@ -22,10 +22,10 @@ public class PlantryDatabaseHelper extends SQLiteOpenHelper {
 
     private void updateMyDatabase(SQLiteDatabase db, int oldVersion, int newVersion) {
         if (oldVersion < 1) {
-            db.execSQL("Create Table RECIPE (" + "_id INTEGER PRIMARY KEY AUTOINCREMENT," + " NAME TEXT,"+"STEPS TEXT," + "LEVEL TEXT," + "TIME TEXT);"); //this creates the RECIPE table
+            db.execSQL("Create Table RECIPE (" + "_id INTEGER PRIMARY KEY AUTOINCREMENT," + " NAME TEXT,"+"STEPS TEXT," + "LEVEL TEXT," + "TIME TEXT," + "IMAGE_RESOURCE_ID INTEGER);"); //this creates the RECIPE table
             db.execSQL("Create Table RECIPEITEMS (" + "RECIPE_ID INTEGER," + " NAME TEXT," + "WEIGHT DOUBLE," + "TYPE TEXT, "+"FOREIGN KEY(RECIPE_ID) REFERENCES RECIPE(_id));"); //this creates the RECIPEITEMS table
             String DD = String.valueOf(R.string.Deep_Dish);
-            insertRecipe(db,"Chicago-Style Deep Dish Pizza with Italian Sausage",String.valueOf(R.string.Deep_Dish),"MEDIUM","02:55:00");
+            insertRecipe(db,"Chicago-Style Deep Dish Pizza with Italian Sausage",String.valueOf(R.string.Deep_Dish),"MEDIUM","02:55:00",R.drawable.chicago_style_deep_dish);
             insertRecipeItem(db, 1, "Flour", 16, "ounces");
             insertRecipeItem(db, 1, "Yellow Cornmeal", 1, "ounces");
             insertRecipeItem(db, 1, "Salt", 0.167, "teaspoon");
@@ -42,7 +42,7 @@ public class PlantryDatabaseHelper extends SQLiteOpenHelper {
             insertRecipeItem(db, 1, "Dried Rosemary", 0.167, "teaspoon");
             insertRecipeItem(db, 1, "Crushed Tomatoes", 25, "ounces");
 
-            insertRecipe(db,"Best Beef Chili",String.valueOf(R.string.Beef_Chili),"MEDIUM","01:45:00");
+            insertRecipe(db,"Best Beef Chili",String.valueOf(R.string.Beef_Chili),"MEDIUM","01:45:00",R.drawable.beef_chili);
             insertRecipeItem(db, 2, "Olive Oil", 1, "ounces");
             insertRecipeItem(db, 2, "Onion", 12, "ounces");
             insertRecipeItem(db, 2, "Garlic", 0.5, "tablespoon");
@@ -58,7 +58,7 @@ public class PlantryDatabaseHelper extends SQLiteOpenHelper {
             insertRecipeItem(db, 2, "Black Beans", 30, "ounces");
             insertRecipeItem(db, 2, "Corn Kernels", 8, "ounces");
 
-            insertRecipe(db,"Feijoada, Brazilian Black Bean Stew",String.valueOf(R.string.Feijoada),"HARD","05:10:00");
+            insertRecipe(db,"Feijoada, Brazilian Black Bean Stew",String.valueOf(R.string.Feijoada),"HARD","05:10:00",R.drawable.feijoada);
             insertRecipeItem(db, 3, "Dry Black Beans", 16, "ounces");
             insertRecipeItem(db, 3, "Olive Oil", 2, "tablespoon");
             insertRecipeItem(db, 3, "Pork Shoulder", 16, "ounces");
@@ -71,7 +71,7 @@ public class PlantryDatabaseHelper extends SQLiteOpenHelper {
             insertRecipeItem(db, 3, "Crushed Tomatoes", 14, "ounces");
             insertRecipeItem(db, 3, "Salt", 0.334, "teaspoon");
 
-            insertRecipe(db,"Spaghetti and Meatballs",String.valueOf(R.string.Spaghetti_Meatball),"EASY","01:00:00");
+            insertRecipe(db,"Spaghetti and Meatballs",String.valueOf(R.string.Spaghetti_Meatball),"EASY","01:00:00",R.drawable.spaghetti_and_meatballs);
             insertRecipeItem(db, 4, "Olive Oil", 1.5, "tablespoon");
             insertRecipeItem(db, 4, "Onion", 4, "ounces");
             insertRecipeItem(db, 4, "Garlic", 0.5, "tablespoon");
@@ -91,7 +91,7 @@ public class PlantryDatabaseHelper extends SQLiteOpenHelper {
             insertRecipeItem(db, 4, "Black Pepper", 0.334, "teaspoon");
             insertRecipeItem(db, 4, "Spaghetti", 24, "ounces");
 
-            insertRecipe(db,"Arugula Salad With Beets and Goat Cheese",String.valueOf(R.string.Arugula_Salad),"EASY","01:10:00");
+            insertRecipe(db,"Arugula Salad With Beets and Goat Cheese",String.valueOf(R.string.Arugula_Salad),"EASY","01:10:00",R.drawable.arugula_salad);
             insertRecipeItem(db, 5, "Beet", 8, "ounces");
             insertRecipeItem(db, 5, "Baby Arugula", 2.5, "tablespoon");
             insertRecipeItem(db, 5, "Goat Cheese", 1.5, "tablespoon");
@@ -103,7 +103,7 @@ public class PlantryDatabaseHelper extends SQLiteOpenHelper {
             insertRecipeItem(db, 5, "Salt", 0.167, "teaspoon");
             insertRecipeItem(db, 5, "Pepper", 0.167, "teaspoon");
 
-            insertRecipe(db,"Easy Shepherd’s Pie",String.valueOf(R.string.Shepherds_Pie),"EASY","01:05:00");
+            insertRecipe(db,"Easy Shepherd’s Pie",String.valueOf(R.string.Shepherds_Pie),"EASY","01:05:00",R.drawable.shepherds_pie);
             insertRecipeItem(db, 6, "Potatoes", 32, "ounces");
             insertRecipeItem(db, 6, "Butter", 4, "ounces");
             insertRecipeItem(db, 6, "Onion", 12, "ounces");
@@ -126,12 +126,13 @@ public class PlantryDatabaseHelper extends SQLiteOpenHelper {
 
     }
 
-    private static void insertRecipe(SQLiteDatabase db, String name, String steps, String level, String time) { //this method is used to insert several drinks
+    private static void insertRecipe(SQLiteDatabase db, String name, String steps, String level, String time, int resource_id) { //this method is used to insert several drinks
         ContentValues recipeValues = new ContentValues();
         recipeValues.put("NAME", name);
         recipeValues.put("STEPS", steps);
         recipeValues.put("LEVEL", level);
         recipeValues.put("TIME", time);
+        recipeValues.put("IMAGE_RESOURCE_ID",resource_id);
         db.insert("RECIPE", null, recipeValues);
     }
 
