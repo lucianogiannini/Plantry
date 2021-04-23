@@ -16,7 +16,7 @@
         android:padding="16dp">
 
         <TextView
-            android:id="@+id/recipe_of_the_day_textview"
+            android:id="@+id/recipe_of_the_week"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -24,13 +24,23 @@
             android:textColor="@color/green"
             android:textSize="30sp" />
 
+        <TextView
+            android:id="@+id/recipe_of_the_week_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:text="temp-title"
+            android:textColor="@color/green"
+            android:textSize="20sp" />
+
         <Button
-            android:id="@+id/recipe_of_the_day_button"
+            android:id="@+id/recipe_of_the_week_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="left"
             android:text="temp-string"
-            android:textColor="@color/white" />
+            android:textColor="@color/white"
+            android:onClick="goToRecipe"/>
 
         <TextView
             android:id="@+id/welcome_textview"
