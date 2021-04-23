@@ -19,6 +19,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         SQLiteOpenHelper plantryDatabaseHelper = new PlantryDatabaseHelper(this);
+
+        db = plantryDatabaseHelper.getReadableDatabase();
+        cursor = db.query("RECIPE",
+                new String[]{"_id", "*"},
+                null,
+                null, null, null, null);
     }
     public void goToPantry(View view){
         Intent intent = new Intent(this, PantryActivity.class);
@@ -26,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void addRecipe(View view){
-        Intent intent = new Intent(this, RecipeActivity.class);
+        Intent intent = new Intent(this, MakeRecipeActivity.class);
         startActivity(intent); //start new activity
     }
 }
