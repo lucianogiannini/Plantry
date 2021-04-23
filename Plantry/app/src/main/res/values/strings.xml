@@ -2,6 +2,16 @@
     <string name="app_name">Plantry</string>
     <string name="pantry">Your Pantry</string>
     <string name="add_recipe">Add Your Recipe</string>
+    <string-array name="recipe_list">
+        <item>Temp Recipe 1</item>
+        <item>Temp Recipe 2</item>
+        <item>Temp Recipe 3</item>
+        <item>Temp Recipe 4</item>
+        <item>Temp Recipe 5</item>
+        <item>Temp Recipe 6</item>
+        <item>Temp Recipe 7</item>
+        <item>Temp Recipe 8</item>
+    </string-array>
     <string name="Deep_Dish">Mix the dough:
 
 In the bowl of a stand mixer fitted with the paddle attachment on low speed, mix the flour, cornmeal, salt, yeast, and sugar until blended. Add 1/2 cup plus 2 tablespoons of room temperature water and mix until combined. If the dough seems dry, add an additional tablespoon or two of water. The dough should feel soft and very slightly sticky, not stiff or dry.
@@ -54,7 +64,7 @@ Add the tomatoes, stir well and taste for salt, adding if it's needed. Simmer th
 
     </string>
 
-    <string name = "Spaghetti_Meatball">
+    <string name="Spaghetti_Meatball">
         Heat olive oil in 4 to 5 quart pot on medium-high heat. Add onions and cook for 2 minutes. Add garlic and cook for 30 seconds longer or until fragrant. Add the carrots and mushrooms, and cook for 2 minutes. Add the tomato paste concentrate, stir to blend, and cook for a minute longer. Add the canned tomatoes, basil, and parsley. Mash and stir the tomatoes with a potato masher until the sauce starts to thicken, about 5 minutes over medium high heat. Reduce heat to low and simmer gently while preparing meatballs, stirring occasionally.
 Form the meatballs:
 In a large bowl, mix by hand the beef, Italian sausage, basil, parsley, mushrooms, eggs, breadcrumbs, cheese, salt, and pepper. Do not over-mix or the meatballs will be tough. Use small melon baller (or teaspoon) to form 1-inch round meatballs. Roll and compress into tight balls.
