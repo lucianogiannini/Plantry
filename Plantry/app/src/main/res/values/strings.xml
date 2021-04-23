@@ -3,6 +3,19 @@
     <string name="pantry">View Pantry</string>
     <string name="add_recipe">Add A Recipe</string>
     <string name="shopping_list">View Shopping List</string>
+    <string name="recipe_of_the_week">Recipe of the Week</string>
+    <string name="welcome_text">Welcome to Plantry! \n We are here to help plan you next meal!</string>
+    <string name="all_recipes">All Recipes:</string>
+    <string name="add_own_recipe">Add Your Own Recipe</string>
+    <string name="add_recipe_hint">Ingredient,weight (insert one then press the add button)</string>
+    <string name="add_button">Add</string>
+    <string name="directions_hint">Enter All Directions</string>
+    <string name="title_hint">Enter Recipe Name</string>
+    <string name="time_hint">Enter Total Time (format-> hh:mm:ss)</string>
+    <string name="add_recipe_too">Add Recipe</string>
+    <string name="your_pantry">Your Pantry</string>
+    <string name="add_shopping_list">Add Recipe To Your Shopping List</string>
+
     <string-array name="recipe_list">
         <item>Temp Recipe 1</item>
         <item>Temp Recipe 2</item>

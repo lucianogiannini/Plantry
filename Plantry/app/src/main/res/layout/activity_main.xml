@@ -20,7 +20,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Recipe of the Week"
+            android:text="@string/recipe_of_the_week"
             android:textColor="@color/green"
             android:textSize="30sp" />
 
@@ -48,7 +48,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Welcome to Plantry! \n We are here to help plan you next meal!"
+            android:text="@string/welcome_text"
             android:textColor="@color/green"
             android:textSize="16sp"
             android:gravity="center"/>
@@ -98,7 +98,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="All Recipes:"
+            android:text="@string/all_recipes"
             android:textColor="@color/white"
             android:textSize="30sp" />
         <TextView
