@@ -1,7 +1,8 @@
 <resources>
     <string name="app_name">Plantry</string>
-    <string name="pantry">Your Pantry</string>
-    <string name="add_recipe">Add Your Recipe</string>
+    <string name="pantry">View Pantry</string>
+    <string name="add_recipe">Add A Recipe</string>
+    <string name="shopping_list">View Shopping List</string>
     <string-array name="recipe_list">
         <item>Temp Recipe 1</item>
         <item>Temp Recipe 2</item>
