@@ -13,6 +13,11 @@
         <item>Temp Recipe 7</item>
         <item>Temp Recipe 8</item>
     </string-array>
+    <string-array name="units">
+        <item>ounces</item>
+        <item>tablespoon</item>
+        <item>teaspoon</item>
+    </string-array>
     <string name="Deep_Dish">Mix the dough:
 
 In the bowl of a stand mixer fitted with the paddle attachment on low speed, mix the flour, cornmeal, salt, yeast, and sugar until blended. Add 1/2 cup plus 2 tablespoons of room temperature water and mix until combined. If the dough seems dry, add an additional tablespoon or two of water. The dough should feel soft and very slightly sticky, not stiff or dry.
