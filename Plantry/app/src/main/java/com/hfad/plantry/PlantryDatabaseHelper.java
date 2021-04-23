@@ -72,11 +72,45 @@ public class PlantryDatabaseHelper extends SQLiteOpenHelper {
             insertRecipeItem(db, 3, "Salt", 0.334, "teaspoon");
 
             insertRecipe(db,"Spaghetti and Meatballs",String.valueOf(R.string.Spaghetti_Meatball),"EASY","01:00:00");
-            insertRecipeItem(db, 4, "Olive Oil", 1, "ounces");
+            insertRecipeItem(db, 4, "Olive Oil", 1.5, "tablespoon");
             insertRecipeItem(db, 4, "Onion", 4, "ounces");
             insertRecipeItem(db, 4, "Garlic", 0.5, "tablespoon");
             insertRecipeItem(db, 4, "Carrots", 8, "ounces");
-            insertRecipeItem(db, 4, "Brown Mushroom", 8, "ounces");
+            insertRecipeItem(db, 4, "Brown Mushroom", 12, "ounces");
+            insertRecipeItem(db, 4, "Italian Plum Tomatoes", 56, "ounces");
+            insertRecipeItem(db, 4, "Parsley", 3, "ounces");
+            insertRecipeItem(db, 4, "Basil", 3, "ounces");
+            insertRecipeItem(db, 4, "Tomato Paste", 1.5, "tablespoon");
+            insertRecipeItem(db, 4, "Parmesan", 4, "ounces");
+            insertRecipeItem(db, 4, "Red Wine", 2, "ounces");
+            insertRecipeItem(db, 4, "Ground Beef", 16, "ounces");
+            insertRecipeItem(db, 4, "Italian Sausage", 8, "ounces");
+            insertRecipeItem(db, 4, "Eggs", 2, "eggs");
+            insertRecipeItem(db, 4, "Breadcrumbs", 6, "ounces");
+            insertRecipeItem(db, 4, "Sea Salt", 0.334, "teaspoon");
+            insertRecipeItem(db, 4, "Black Pepper", 0.334, "teaspoon");
+            insertRecipeItem(db, 4, "Spaghetti", 24, "ounces");
+
+            insertRecipe(db,"Arugula Salad With Beets and Goat Cheese",String.valueOf(R.string.Arugula_Salad),"EASY","01:10:00");
+            insertRecipeItem(db, 5, "Beet", 8, "ounces");
+            insertRecipeItem(db, 5, "Baby Arugula", 2.5, "tablespoon");
+            insertRecipeItem(db, 5, "Goat Cheese", 1.5, "tablespoon");
+            insertRecipeItem(db, 5, "Walnuts", 2, "ounces");
+            insertRecipeItem(db, 5, "Olive Oil", 1.5, "tablespoon");
+            insertRecipeItem(db, 5, "Lemon Juice", 1.25, "ounces");
+            insertRecipeItem(db, 5, "Dry Powdered Mustard", 0.167, "teaspoon");
+            insertRecipeItem(db, 5, "Sugar", 0.167, "teaspoon");
+            insertRecipeItem(db, 5, "Salt", 0.167, "teaspoon");
+            insertRecipeItem(db, 5, "Pepper", 0.167, "teaspoon");
+
+            insertRecipe(db,"Easy Shepherd’s Pie",String.valueOf(R.string.Shepherds_Pie),"EASY","01:05:00");
+            insertRecipeItem(db, 6, "Potatoes", 32, "ounces");
+            insertRecipeItem(db, 6, "Butter", 4, "ounces");
+            insertRecipeItem(db, 6, "Onion", 12, "ounces");
+            insertRecipeItem(db, 6, "Mixed Vegetables", 16, "ounces");
+            insertRecipeItem(db, 6, "Ground Beef", 24, "ounces");
+            insertRecipeItem(db, 6, "Beef Broth", 8, "ounces");
+            insertRecipeItem(db, 6, "Worcestershire sauce ", 0.167, "teaspoon");
 
         }
 
