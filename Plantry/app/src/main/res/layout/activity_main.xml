@@ -40,7 +40,8 @@
             android:gravity="left"
             android:text="temp-string"
             android:textColor="@color/white"
-            android:onClick="goToRecipe"/>
+            android:onClick="goToRecipe"
+            android:tag="0"/>
 
         <TextView
             android:id="@+id/welcome_textview"
@@ -52,46 +53,46 @@
             android:textSize="16sp"
             android:gravity="center"/>
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="16dp">
-
-            <Button
-                android:id="@+id/your_pantry_button"
-                android:layout_width="wrap_content"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
-                android:layout_marginTop="8dp"
-                android:onClick="goToPantry"
-                android:text="@string/pantry"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:orientation="vertical"
+                android:padding="16dp">
 
-            <Button
-                android:id="@+id/your_shopping_list_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="72dp"
-                android:onClick="goToPantry"
-                android:text="@string/shopping_list"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                <Button
+                    android:id="@+id/your_pantry_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="8dp"
+                    android:onClick="goToPantry"
+                    android:text="@string/pantry"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-            <Button
-                android:id="@+id/add_your_recipe_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="4dp"
-                android:onClick="addRecipe"
-                android:text="@string/add_recipe"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                <Button
+                    android:id="@+id/your_shopping_list_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="72dp"
+                    android:onClick="goToPantry"
+                    android:text="@string/shopping_list"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                <Button
+                    android:id="@+id/add_your_recipe_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="4dp"
+                    android:onClick="addRecipe"
+                    android:text="@string/add_recipe"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
         <TextView
             android:id="@+id/all_recipies_textview"
             android:layout_width="wrap_content"
@@ -114,7 +115,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="left"
             android:gravity="left|top"
-            android:text="temp-items"/>
+            android:text="temp-items"
+            android:tag="1"/>
         <TextView
             android:id="@+id/recipe_2_textview"
             android:layout_width="wrap_content"
@@ -129,7 +131,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="left"
             android:gravity="left|top"
-            android:text="temp-items"/>
+            android:text="temp-items"
+            android:tag="2"/>
         <TextView
             android:id="@+id/recipe_3_textview"
             android:layout_width="wrap_content"
@@ -144,7 +147,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="left"
             android:gravity="left|top"
-            android:text="temp-items"/>
+            android:text="temp-items"
+            android:tag="3"/>
         <TextView
             android:id="@+id/recipe_4_textview"
             android:layout_width="wrap_content"
@@ -159,7 +163,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="left"
             android:gravity="left|top"
-            android:text="temp-items"/>
+            android:text="temp-items"
+            android:tag="4"/>
         <TextView
             android:id="@+id/recipe_5_textview"
             android:layout_width="wrap_content"
@@ -174,7 +179,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="left"
             android:gravity="left|top"
-            android:text="temp-items"/>
+            android:text="temp-items"
+            android:tag="5"/>
         <TextView
             android:id="@+id/recipe_6_textview"
             android:layout_width="wrap_content"
@@ -189,7 +195,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="left"
             android:gravity="left|top"
-            android:text="temp-items"/>
+            android:text="temp-items"
+            android:tag="6"/>
     </LinearLayout>
 
 

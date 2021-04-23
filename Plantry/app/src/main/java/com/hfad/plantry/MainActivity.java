@@ -39,10 +39,43 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, MakeRecipeActivity.class);
         startActivity(intent); //start new activity
     }
+
+
     public void goToRecipe(View view){
         Intent intent = new Intent(this, RecipeActivity.class);
-        TextView recipe_of_the_week = (TextView)findViewById(R.id.recipe_of_the_week_textview);
-        intent.putExtra("NAME",recipe_of_the_week.getText());
+        String tag = (view.getTag()).toString();
+        System.out.println(tag);
+        TextView recipe;
+
+        switch(tag){
+
+            case "0":
+                recipe = (TextView)findViewById(R.id.recipe_of_the_week_textview);
+                break;
+            case "1":
+                recipe = (TextView)findViewById(R.id.recipe_1_textview);
+                break;
+            case "2":
+                recipe = (TextView)findViewById(R.id.recipe_2_textview);
+                break;
+            case "3":
+                recipe = (TextView)findViewById(R.id.recipe_3_textview);
+                break;
+            case "4":
+                recipe = (TextView)findViewById(R.id.recipe_4_textview);
+                break;
+            case "5":
+                recipe = (TextView)findViewById(R.id.recipe_5_textview);
+                break;
+            case "6":
+                recipe = (TextView)findViewById(R.id.recipe_6_textview);
+                break;
+            default:
+                recipe = (TextView)findViewById(R.id.recipe_of_the_week_textview);
+                break;
+
+        }
+        intent.putExtra("NAME",recipe.getText());
         startActivity(intent); //start new activity
     }
 }
