@@ -38,9 +38,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="left"
+
             android:text="temp-string"
             android:textColor="@color/white"
             android:onClick="goToRecipe"
+            android:textAllCaps="false"
             android:textSize="10dp"
             android:drawableLeft="@drawable/error"
             android:tag="0"/>
@@ -118,6 +120,8 @@
             android:layout_gravity="left"
             android:gravity="left|top"
             android:text="temp-items"
+            android:textAllCaps="false"
+            android:textSize="10dp"
             android:onClick="goToRecipe"
             android:tag="1"/>
         <TextView
@@ -135,6 +139,8 @@
             android:layout_gravity="left"
             android:gravity="left|top"
             android:text="temp-items"
+            android:textAllCaps="false"
+            android:textSize="10dp"
             android:onClick="goToRecipe"
             android:tag="2"/>
         <TextView
@@ -151,6 +157,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="left"
             android:gravity="left|top"
+            android:textAllCaps="false"
+            android:textSize="10dp"
             android:text="temp-items"
             android:onClick="goToRecipe"
             android:tag="3"/>
@@ -168,6 +176,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="left"
             android:gravity="left|top"
+            android:textAllCaps="false"
+            android:textSize="10dp"
             android:text="temp-items"
             android:onClick="goToRecipe"
             android:tag="4"/>
@@ -185,6 +195,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="left"
             android:gravity="left|top"
+            android:textAllCaps="false"
+            android:textSize="10dp"
             android:text="temp-items"
             android:onClick="goToRecipe"
             android:tag="5"/>
@@ -202,6 +214,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="left"
             android:gravity="left|top"
+            android:textAllCaps="false"
+            android:textSize="10dp"
             android:onClick="goToRecipe"
             android:text="temp-items"
             android:tag="6"/>
