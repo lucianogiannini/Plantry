@@ -7,11 +7,13 @@ import android.os.Bundle;
 import android.view.View;
 
 public class RecipeActivity extends AppCompatActivity {
+    public static final String recipeName = "NAME";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recipe);
+        String NAME = (String)getIntent().getExtras().get(recipeName);
     }
 
     public void addRecipeToShoppingList(View view){

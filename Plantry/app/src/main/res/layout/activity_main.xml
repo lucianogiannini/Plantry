@@ -41,6 +41,8 @@
             android:text="temp-string"
             android:textColor="@color/white"
             android:onClick="goToRecipe"
+            android:textSize="10dp"
+            android:drawableLeft="@drawable/error"
             android:tag="0"/>
 
         <TextView
@@ -57,7 +59,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="16dp">
+                android:padding="8dp">
 
                 <Button
                     android:id="@+id/your_pantry_button"
