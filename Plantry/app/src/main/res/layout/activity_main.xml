@@ -75,7 +75,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="72dp"
-                    android:onClick="goToPantry"
+                    android:onClick="goToShoppingList"
                     android:text="@string/shopping_list"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"

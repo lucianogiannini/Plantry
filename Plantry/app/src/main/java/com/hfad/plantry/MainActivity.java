@@ -40,7 +40,10 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, MakeRecipeActivity.class);
         startActivity(intent); //start new activity
     }
-
+    public void goToShoppingList(View view){
+        Intent intent = new Intent(this, ShoppingListActivity.class);
+        startActivity(intent); //start new activity
+    }
 
     public void goToRecipe(View view) {
         Intent intent = new Intent(this, RecipeActivity.class);
