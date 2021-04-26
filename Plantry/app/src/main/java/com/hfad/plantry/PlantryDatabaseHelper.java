@@ -24,7 +24,9 @@ public class PlantryDatabaseHelper extends SQLiteOpenHelper {
 
             db.execSQL("Create Table RECIPE (" + "_id INTEGER PRIMARY KEY AUTOINCREMENT," + " NAME TEXT,"+"STEPS TEXT," + "LEVEL TEXT," + "TIME TEXT," + "IMAGE_RESOURCE_ID INTEGER," + "IMAGE_RESOURCE_ID_LARGE INTEGER);"); //this creates the RECIPE table
             db.execSQL("Create Table RECIPEITEMS (" + "RECIPE_ID INTEGER," + " NAME TEXT," + "WEIGHT DOUBLE," + "TYPE TEXT, "+"FOREIGN KEY(RECIPE_ID) REFERENCES RECIPE(_id));"); //this creates the RECIPEITEMS table
-            String DD = String.valueOf(R.string.Deep_Dish);
+            db.execSQL("Create Table PANTRY (" + " NAME TEXT," + "WEIGHT DOUBLE," + "TYPE TEXT);");
+            db.execSQL("Create Table SHOPPINGLIST (" + "RECIPE_ID INTEGER," + " NAME TEXT," + "WEIGHT DOUBLE," + "TYPE TEXT, "+"FOREIGN KEY(RECIPE_ID) REFERENCES RECIPE(_id));");
+
             insertRecipe(db,"Chicago-Style Deep Dish Pizza with Italian Sausage",String.valueOf(R.string.Deep_Dish),"MEDIUM","02:55:00",R.drawable.chicago_style_deep_dish_small,R.drawable.chicago_style_deep_dish);
             insertRecipeItem(db, 1, "Flour", 16, "ounces");
             insertRecipeItem(db, 1, "Yellow Cornmeal", 1, "ounces");
@@ -144,6 +146,24 @@ public class PlantryDatabaseHelper extends SQLiteOpenHelper {
         recipeItemValues.put("WEIGHT", weight);
         recipeItemValues.put("TYPE", type);
         db.insert("RECIPEITEMS", null, recipeItemValues);
+    }
+
+    private static void insertPantry(SQLiteDatabase db, String name, double weight, String type) { //this method is used to insert several drinks
+        ContentValues recipeItemValues = new ContentValues();
+        recipeItemValues.put("NAME", name);
+        recipeItemValues.put("WEIGHT", weight);
+        recipeItemValues.put("TYPE", type);
+        db.insert("PANTRY", null, recipeItemValues);
+    }
+
+
+    private static void insertShoppingList(SQLiteDatabase db, int recipe_id, String name, double weight, String type) { //this method is used to insert several drinks
+        ContentValues recipeItemValues = new ContentValues();
+        recipeItemValues.put("RECIPE_ID", recipe_id);
+        recipeItemValues.put("NAME", name);
+        recipeItemValues.put("WEIGHT", weight);
+        recipeItemValues.put("TYPE", type);
+        db.insert("SHOPPINGLIST", null, recipeItemValues);
     }
 
 }

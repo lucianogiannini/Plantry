@@ -71,7 +71,7 @@
             android:id="@+id/editText_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/directions_hint"
+            android:hint="@string/title_hint"
             android:background="@color/white"/>
         <EditText
             android:layout_marginTop="30dp"

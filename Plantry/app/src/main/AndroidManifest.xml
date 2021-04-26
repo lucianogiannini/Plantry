@@ -12,6 +12,7 @@
         <activity android:name=".ShoppingListActivity"></activity>
         <activity android:name=".RecipeActivity" />
         <activity android:name=".PantryActivity" />
+        <activity android:name=".MakeRecipeActivity"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
