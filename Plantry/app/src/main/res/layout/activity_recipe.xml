@@ -81,6 +81,7 @@
             android:background="@color/white"/>
 
         <Button
+            android:id="@+id/add_recipe_to_shopping_list_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"

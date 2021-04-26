@@ -66,7 +66,7 @@ public class RecipeActivity extends AppCompatActivity {
             do{
                 String tempItemAllFields = "";
                 String tempName = cursor.getString(1);
-                Double tempWeight = cursor.getDouble(2);
+                double tempWeight = cursor.getDouble(2);
                 String tempType = cursor.getString(3);
                 if (!tempType.equals("ounces")) {
                     if (tempType.equals("teaspoon"))
@@ -107,6 +107,9 @@ public class RecipeActivity extends AppCompatActivity {
     }
 
     public void addRecipeToShoppingList(View view){
+        Button add_recipe_to_shopping_list_button = (Button) findViewById(R.id.add_recipe_to_shopping_list_button);
+        add_recipe_to_shopping_list_button.setEnabled(false);
+
         Intent intent = new Intent(this, ShoppingListActivity.class);
         startActivity(intent); //start new activity
     }
