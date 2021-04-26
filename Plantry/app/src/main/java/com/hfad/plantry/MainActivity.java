@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
                     null,
                     null, null, null, null);
             Random rng = new Random();
-            int randomInt = rng.nextInt(6);
+            int randomInt = rng.nextInt(6)+1;
             cursor.moveToPosition(randomInt);
 
             //insertRecipe(db,"Chicago-Style Deep Dish Pizza with Italian Sausage",String.valueOf(R.string.Deep_Dish),"MEDIUM","02:55:00",R.drawable.chicago_style_deep_dish);
@@ -87,7 +87,12 @@ public class MainActivity extends AppCompatActivity {
                         recipe_of_the_week_text += convertOuncesToTablespoon(tempWeight) + " " + tempType + " of " + tempName + "\n";
                 }//end if
                 else {
-                    recipe_of_the_week_text += tempWeight + " " + tempType + " of " + tempName + "\n";
+                    if(tempWeight > 7.9) {
+                        recipe_of_the_week_text += convertOuncesToCup(tempWeight) + " " + "cups" + " of " + tempName + "\n";
+                    }
+                    else{
+                        recipe_of_the_week_text += tempWeight + " " + tempType + " of " + tempName + "\n";
+                    }
                 }//end else
             }//end for loop
             recipe_of_the_week_text += "Time : " + time + "\t\t" + "Level: " + level;
@@ -192,7 +197,12 @@ public class MainActivity extends AppCompatActivity {
                             recipe_text += convertOuncesToTablespoon(tempWeight) + " " + tempType + " of " + tempName + "\n";
                     }//end if
                     else {
-                        recipe_text += tempWeight + " " + tempType + " of " + tempName + "\n";
+                        if(tempWeight > 7.9) {
+                            recipe_text += convertOuncesToCup(tempWeight) + " " + "cups" + " of " + tempName + "\n";
+                        }
+                        else{
+                            recipe_text += tempWeight + " " + tempType + " of " + tempName + "\n";
+                        }
                     }//end else
                 }//end for loop
                 recipe_text += "Time : " + time + "\t\t" + "Level: " + level;

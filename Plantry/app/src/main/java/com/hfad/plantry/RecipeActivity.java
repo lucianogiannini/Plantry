@@ -75,7 +75,12 @@ public class RecipeActivity extends AppCompatActivity {
                         tempItemAllFields += convertOuncesToTablespoon(tempWeight) + " " + tempType + " of " + tempName + "\n";
                 }//end if
                 else {
-                    tempItemAllFields += tempWeight + " " + tempType + " of " + tempName + "\n";
+                    if(tempWeight > 7.9) {
+                        tempItemAllFields += convertOuncesToCup(tempWeight) + " " + "cups" + " of " + tempName + "\n";
+                    }
+                    else{
+                        tempItemAllFields += tempWeight + " " + tempType + " of " + tempName + "\n";
+                    }
                 }//end else
                 recipeItems += tempItemAllFields;
 
