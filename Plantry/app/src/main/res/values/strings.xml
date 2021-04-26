@@ -4,7 +4,7 @@
     <string name="add_recipe">Add A Recipe</string>
     <string name="shopping_list">View Shopping List</string>
     <string name="recipe_of_the_week">Recipe of the Week</string>
-    <string name="welcome_text">Welcome to Plantry! \n We are here to help plan you next meal!</string>
+    <string name="welcome_text">Welcome to Plantry! \n We are here to help plan your next meal!</string>
     <string name="all_recipes">All Recipes:</string>
     <string name="add_own_recipe">Add Your Own Recipe</string>
     <string name="add_recipe_hint">Ingredient,weight (insert one then press the add button)</string>
@@ -32,97 +32,54 @@
         <item>tablespoon</item>
         <item>teaspoon</item>
     </string-array>
-    <string name="Deep_Dish">Mix the dough:
+    <string name="Deep_Dish">Mix the dough:\n1. In the bowl of a stand mixer fitted with the paddle attachment on low speed, mix the flour, cornmeal, salt, yeast, and sugar until blended. Add 1/2 cup plus 2 tablespoons of room temperature water and mix until combined. If the dough seems dry, add an additional tablespoon or two of water. The dough should feel soft and very slightly sticky, not stiff or dry.\n
+        \nKnead the dough:\n2. Switch to the dough hook and knead the dough at low speed for 5 to 7 minutes, or until it is smooth and elastic. Drizzle 1 teaspoon olive oil in a clean bowl. Form the dough into a ball and place it in the bowl, turning to coat all over with oil. Cover with plastic wrap and let rise for 1 hour, or until puffy.\n
+        \nLaminate the dough:\n3. On a lightly floured surface, roll the dough into a 9x12-inch rectangle. Spread 2 tablespoons of butter over the surface of the dough. Starting at the long side, roll the dough into a cylinder. Place the cylinder with the seam side up, press it flat, and fold the dough into thirds like a business letter. Shape into a ball and return it to the bowl. Cover with plastic and refrigerate for 45 minutes.\n
+        \nCook the sausage:\n4. In a large skillet set over medium heat, cook the sausage until no longer pink, breaking it up with a fork or rubber spatula to crumble it. Transfer to a plate lined with paper towels.\n
+        \nMake the sauce:\n5. In the same skillet, you used to cook the sausage, melt the butter over medium heat. Add the onions, garlic, rosemary, thyme, and red pepper flakes. Cook, stirring, for 4 to 5 minutes or until the onions soften. Add the tomatoes, salt, and sugar to the pan, and continue to cook and stir for 3 to 4 minutes, or until the flavors blend together and the sauce thickens. Set aside to cool.\n
+        \nPreheat the oven:\n6. Set the oven at 425°F. Generously spray a 9x2-inch cake pan with vegetable oil.\n
+        \nAssemble the pizza:\n7. On a lightly floured surface, roll the dough into a 12-inch circle. Fit it into the cake pan, pressing it into the corners and up the sides of the pan. Let rest for 10 minutes. Once the dough has relaxed, press it again into the sides of the pan to keep it from shrinking when it is baked. Layer the cheese slices on the bottom, top with the cooked and crumbled sausage, and spread the sauce over the top of the pie. Sprinkle with Parmesan cheese.\n
+        \nBake the pizza:\n8. Bake for about 25 minutes, or until the crust browns and the filling is bubbly. Remove from the oven and let rest for 10 minutes to allow the sauce to settle before gently removing it from the pan in one piece, or slice and serve it from the pan. To remove in one piece, run a knife around the circumference of the pan. Carefully slide a wide, thin spatula under the dough and lift it out of the pan. Transfer it to a large plate.\n
+    </string>
 
-In the bowl of a stand mixer fitted with the paddle attachment on low speed, mix the flour, cornmeal, salt, yeast, and sugar until blended. Add 1/2 cup plus 2 tablespoons of room temperature water and mix until combined. If the dough seems dry, add an additional tablespoon or two of water. The dough should feel soft and very slightly sticky, not stiff or dry.
-Knead the dough:
-Switch to the dough hook and knead the dough at low speed for 5 to 7 minutes, or until it is smooth and elastic. Drizzle 1 teaspoon olive oil in a clean bowl. Form the dough into a ball and place it in the bowl, turning to coat all over with oil. Cover with plastic wrap and let rise for 1 hour, or until puffy.
-Laminate the dough:
-On a lightly floured surface, roll the dough into a 9x12-inch rectangle. Spread 2 tablespoons of butter over the surface of the dough. Starting at the long side, roll the dough into a cylinder. Place the cylinder with the seam side up, press it flat, and fold the dough into thirds like a business letter. Shape into a ball and return it to the bowl. Cover with plastic and refrigerate for 45 minutes.
-Cook the sausage:
-In a large skillet set over medium heat, cook the sausage until no longer pink, breaking it up with a fork or rubber spatula to crumble it. Transfer to a plate lined with paper towels.
-Make the sauce:
-In the same skillet, you used to cook the sausage, melt the butter over medium heat. Add the onions, garlic, rosemary, thyme, and red pepper flakes. Cook, stirring, for 4 to 5 minutes or until the onions soften. Add the tomatoes, salt, and sugar to the pan, and continue to cook and stir for 3 to 4 minutes, or until the flavors blend together and the sauce thickens. Set aside to cool.
-Preheat the oven:
-Set the oven at 425°F. Generously spray a 9x2-inch cake pan with vegetable oil.
-Assemble the pizza:
-On a lightly floured surface, roll the dough into a 12-inch circle. Fit it into the cake pan, pressing it into the corners and up the sides of the pan. Let rest for 10 minutes. Once the dough has relaxed, press it again into the sides of the pan to keep it from shrinking when it is baked. Layer the cheese slices on the bottom, top with the cooked and crumbled sausage, and spread the sauce over the top of the pie. Sprinkle with Parmesan cheese.
-Bake the pizza:
-Bake for about 25 minutes, or until the crust browns and the filling is bubbly. Remove from the oven and let rest for 10 minutes to allow the sauce to settle before gently removing it from the pan in one piece, or slice and serve it from the pan. To remove in one piece, run a knife around the circumference of the pan. Carefully slide a wide, thin spatula under the dough and lift it out of the pan. Transfer it to a large plate.
-</string>
+    <string name="Beef_Chili">Cook the onions, garlic, and beef:\n1. In a large, heavy-bottomed pot over medium heat, heat the oil. Add the onions and garlic and cook, stirring often, for 6 minutes, or until the onions soften. Add the beef and salt. Cook, breaking the meat up with a potato masher or the edge of a spoon, for 5 minutes, or until it is no longer pink.\n
+        \nAdd the spices and peppers:\n2. Add the ancho and chipotle powders, cumin, and oregano to the pot. Cook, stirring, for 1 minute. Stir in the bell peppers.\n
+        \nPurée and add the tomatoes:\n3. In a blender, pulse the tomatoes and their juices for 5 seconds to break them up. Add them to the pot with the water and bring to a boil.\n
+        \nCook the chili:\n4. Lower the heat and simmer for a minimum of 45 minutes or up to 1 1/2 hours, or until the liquid is well flavored (the longer the better!). Add more hot water during cooking, 1/2 cup at a time, if the mixture seems too thick.\n
+        \nAdd the beans and corn:\n5. Add the beans and corn and cook, stirring, for 5 minutes, or until hot. Taste and add more salt or chili powder, if you like.\n
+        \nServe with garnishes:\n6. Set out bowls of your favorite garnishes for serving. This chili keeps for about a week, covered, in the refrigerator and up to 3 months when frozen.
+    </string>
 
-    <string name="Beef_Chili">
-        Cook the onions, garlic, and beef:
-In a large, heavy-bottomed pot over medium heat, heat the oil. Add the onions and garlic and cook, stirring often, for 6 minutes, or until the onions soften. Add the beef and salt. Cook, breaking the meat up with a potato masher or the edge of a spoon, for 5 minutes, or until it is no longer pink.
-Add the spices and peppers:
-Add the ancho and chipotle powders, cumin, and oregano to the pot. Cook, stirring, for 1 minute. Stir in the bell peppers.
-Purée and add the tomatoes:
-
-In a blender, pulse the tomatoes and their juices for 5 seconds to break them up. Add them to the pot with the water and bring to a boil.
-Cook the chili:
-Lower the heat and simmer for a minimum of 45 minutes or up to 1 1/2 hours, or until the liquid is well flavored (the longer the better!). Add more hot water during cooking, 1/2 cup at a time, if the mixture seems too thick.
-Add the beans and corn:
-Add the beans and corn and cook, stirring, for 5 minutes, or until hot. Taste and add more salt or chili powder, if you like.
-Serve with garnishes:
-Set out bowls of your favorite garnishes for serving. This chili keeps for about a week, covered, in the refrigerator and up to 3 months when frozen.
+    <string name="Feijoada">Soak beans in hot water:\n1. Pour boiling water over the black beans and let them sit while you prepare the rest of the stew.\n
+        \nBrown the pork shoulder:\n2. Heat the olive oil in a large pot over medium-high heat and brown the pork shoulder. When the meat has browned, remove the meat from the pot, set it aside.\n
+        \nBrown the onions, add garlic:\n3. Add the onions to the pot. Brown them, stirring occasionally, scraping up any browned bits from the bottom of the pot. Sprinkle a little salt over the onions and add the garlic. Stir well and saute 2 more minutes.\n
+        \nAdd meat, bay leaves, cover with water, simmer:\n4. Add back the pork shoulder, and the other meats and add enough water to cover. Add the bay leaves, cover, and bring to a simmer. Cook gently for 1 hour.\n
+        \nAdd soaked black beans, simmer:\n5. Drain the black beans from their soaking liquid and add them to the stew. Simmer gently, covered, until the beans are tender, about an hour and a half.\n
+        \nAdd tomatoes and simmer:\n6. Add the tomatoes, stir well and taste for salt, adding if it\'s needed. Simmer this, uncovered, until the meat begins to fall off the ham hock, which will probably take 2-3 hours. Serve with white rice and hot sauce.
 
     </string>
 
-    <string name="Feijoada">
-        Soak beans in hot water
-Pour boiling water over the black beans and let them sit while you prepare the rest of the stew.
-Brown the pork shoulder
-Heat the olive oil in a large pot over medium-high heat and brown the pork shoulder. When the meat has browned, remove the meat from the pot, set it aside.
-Brown the onions, add garlic
-Add the onions to the pot. Brown them, stirring occasionally, scraping up any browned bits from the bottom of the pot. Sprinkle a little salt over the onions and add the garlic. Stir well and saute 2 more minutes.
-Add meat, bay leaves, cover with water, simmer
-Add back the pork shoulder, and the other meats and add enough water to cover. Add the bay leaves, cover, and bring to a simmer. Cook gently for 1 hour.
-Add soaked black beans, simmer
-Drain the black beans from their soaking liquid and add them to the stew. Simmer gently, covered, until the beans are tender, about an hour and a half.
-Add tomatoes and simmer
-Add the tomatoes, stir well and taste for salt, adding if it\'s needed. Simmer this, uncovered, until the meat begins to fall off the ham hock, which will probably take 2-3 hours. Serve with white rice and hot sauce.
-
+    <string name="Spaghetti_Meatball">Prepare the sauce:\n1. Heat olive oil in 4 to 5 quart pot on medium-high heat. Add onions and cook for 2 minutes. Add garlic and cook for 30 seconds longer or until fragrant. Add the carrots and mushrooms, and cook for 2 minutes. Add the tomato paste concentrate, stir to blend, and cook for a minute longer. Add the canned tomatoes, basil, and parsley. Mash and stir the tomatoes with a potato masher until the sauce starts to thicken, about 5 minutes over medium high heat. Reduce heat to low and simmer gently while preparing meatballs, stirring occasionally.\n
+        \nForm the meatballs:\n2. In a large bowl, mix by hand the beef, Italian sausage, basil, parsley, mushrooms, eggs, breadcrumbs, cheese, salt, and pepper. Do not over-mix or the meatballs will be tough. Use small melon baller (or teaspoon) to form 1-inch round meatballs. Roll and compress into tight balls.\n
+        \nBrown the meatballs:\n3. In a separate wide, shallow pan, heat the olive oil on medium high heat. Brown meat balls on all sides, about 2 to 3 minutes. Depending on pan size you may need to brown two batches of the meatballs. Cook them in a single layer; do not crowd the pan by stacking them. Do not overcook the meatballs; they will continue to cook in the sauce. You just want to brown them on all sides. Towards the end of browning the meatballs, add a little bit of red wine to deglaze the pan.\n
+        \nFinish and simmer the sauce:\n4. Add the red wine to the sauce and stir in the cheese. Add salt to taste. Add meatballs and gently stir. Simmer the sauce and meatballs for 30 to 45 minutes, stirring occasionally.\n
+        \nCook the spaghetti:\n5. While the sauce is simmering, bring a large pot with 4 quarts of salted water in it to a boil (1 tablespoon of salt for every 2 quarts of water). When the water returns to a boil add the pasta to the pot. Leave the pot uncovered while you cook the pasta on high heat with a vigorous boil. Put a timer on for 8 to 10 minutes, or according to package directions for al dente pasta (cooked but still a little firm). Drain.\n
+        \nServe:\n6. To serve, place thin layer of sauce on plate, add pasta, add sauce and meatballs, and then sprinkle with grated Parmesan-Romano cheese.
     </string>
 
-    <string name="Spaghetti_Meatball">
-        Heat olive oil in 4 to 5 quart pot on medium-high heat. Add onions and cook for 2 minutes. Add garlic and cook for 30 seconds longer or until fragrant. Add the carrots and mushrooms, and cook for 2 minutes. Add the tomato paste concentrate, stir to blend, and cook for a minute longer. Add the canned tomatoes, basil, and parsley. Mash and stir the tomatoes with a potato masher until the sauce starts to thicken, about 5 minutes over medium high heat. Reduce heat to low and simmer gently while preparing meatballs, stirring occasionally.
-Form the meatballs:
-In a large bowl, mix by hand the beef, Italian sausage, basil, parsley, mushrooms, eggs, breadcrumbs, cheese, salt, and pepper. Do not over-mix or the meatballs will be tough. Use small melon baller (or teaspoon) to form 1-inch round meatballs. Roll and compress into tight balls.
-Brown the meatballs:
-In a separate wide, shallow pan, heat the olive oil on medium high heat. Brown meat balls on all sides, about 2 to 3 minutes. Depending on pan size you may need to brown two batches of the meatballs. Cook them in a single layer; do not crowd the pan by stacking them. Do not overcook the meatballs; they will continue to cook in the sauce. You just want to brown them on all sides. Towards the end of browning the meatballs, add a little bit of red wine to deglaze the pan.
-Finish and simmer the sauce:
-Add the red wine to the sauce and stir in the cheese. Add salt to taste. Add meatballs and gently stir. Simmer the sauce and meatballs for 30 to 45 minutes, stirring occasionally.
-Cook the spaghetti:
-While the sauce is simmering, bring a large pot with 4 quarts of salted water in it to a boil (1 tablespoon of salt for every 2 quarts of water). When the water returns to a boil add the pasta to the pot. Leave the pot uncovered while you cook the pasta on high heat with a vigorous boil. Put a timer on for 8 to 10 minutes, or according to package directions for al dente pasta (cooked but still a little firm). Drain.
-Serve:
-To serve, place thin layer of sauce on plate, add pasta, add sauce and meatballs, and then sprinkle with grated Parmesan-Romano cheese.
-
+    <string name="Arugula_Salad">Start:\n
+        * To roast beets, scrub raw beets clean, coat with a little olive oil, wrap in aluminum foil, and roast in 400°F oven for 1 to 2 hours, until fork tender\n
+        ** To boil beets, scrub raw beets clean, put in small pot, cover with water, bring to a boil, reduce to a simmer, cover, and cook for 45 min to an hour, until fork tender\n
+        \nMake the vinaigrette:\n1. Place dressing ingredients in a jar and shake to emulsify. Adjust ingredients to taste.\n
+        \nAssemble the salad:\n2. According to how much you want. Compose each dish with a handful of arugula leaves, a few cooked chopped beets, some crumbled goat cheese, and some chopped toasted walnuts.\n
+        \nDrizzle the salad with vinaigrette:\n(You may have a little extra vinaigrette.)
     </string>
 
-    <string name="Arugula_Salad">
-        Start
-* To roast beets, scrub raw beets clean, coat with a little olive oil, wrap in aluminum foil, and roast in 400°F oven for 1 to 2 hours, until fork tender
-** To boil beets, scrub raw beets clean, put in small pot, cover with water, bring to a boil, reduce to a simmer, cover, and cook for 45 min to an hour, until fork tender
-Make the vinaigrette:
-Place dressing ingredients in a jar and shake to emulsify. Adjust ingredients to taste.
-Assemble the salad:
-According to how much you want. Compose each dish with a handful of arugula leaves, a few cooked chopped beets, some crumbled goat cheese, and some chopped toasted walnuts.
-Drizzle the salad with vinaigrette:
-(You may have a little extra vinaigrette.)
-
-    </string>
-
-    <string name="Shepherds_Pie">
-        Boil the potatoes:
-Place the peeled and quartered potatoes in medium sized pot. Cover with at least an inch of cold water. Add a teaspoon of salt. Bring to a boil, reduce to a simmer, and cook until tender (about 20 minutes).
-Sauté vegetables:
-While the potatoes are cooking, melt 4 tablespoons of the butter in a large sauté pan on medium heat. Add the chopped onions and cook until tender, about 6 to 10 minutes. If you are including vegetables, add them according to their cooking time. Carrots should be cooked with the onions, because they take as long to cook as the onions do. If you are including peas or corn, add them toward the end of the cooking of the onions, or after the meat starts to cook, as they take very little cooking time. Add the ground beef, then Worcestershire sauce and broth: Add ground beef to the pan with the onions and vegetables. Cook until no longer pink. Season with salt and pepper. Add the Worcestershire sauce and beef broth. Bring the broth to a simmer and reduce heat to low. Cook uncovered for 10 minutes, adding more beef broth if necessary to keep the meat from drying out.
-Mash the cooked potatoes:
-When the potatoes are done cooking (a fork can easily pierce), remove them from the pot and place them in a bowl with the remaining 4 Tbsp of butter. Mash with a fork or potato masher, and season with salt and pepper to taste.
-Layer the meat mixture and mashed potatoes in a casserole dish:
-Preheat oven to 400°F. Spread the beef, onions, and vegetables (if using) in an even layer in a large baking dish (9x13 casserole). Spread the mashed potatoes over the top of the ground beef. Rough up the surface of the mashed potatoes with a fork so there are peaks that will get well browned. You can even use a fork to make creative designs in the mashed potatoes.
-Bake in oven:
-Place in a 400°F oven and cook until browned and bubbling, about 30 minutes. If necessary, broil for the last few minutes to help the surface of the mashed potatoes brown.
+    <string name="Shepherds_Pie">Boil the potatoes:\n1. Place the peeled and quartered potatoes in medium sized pot. Cover with at least an inch of cold water. Add a teaspoon of salt. Bring to a boil, reduce to a simmer, and cook until tender (about 20 minutes).\n
+        \nSauté vegetables:\n2. While the potatoes are cooking, melt 4 tablespoons of the butter in a large sauté pan on medium heat. Add the chopped onions and cook until tender, about 6 to 10 minutes. If you are including vegetables, add them according to their cooking time. Carrots should be cooked with the onions, because they take as long to cook as the onions do. If you are including peas or corn, add them toward the end of the cooking of the onions, or after the meat starts to cook, as they take very little cooking time. Add the ground beef, then Worcestershire sauce and broth: Add ground beef to the pan with the onions and vegetables. Cook until no longer pink. Season with salt and pepper. Add the Worcestershire sauce and beef broth. Bring the broth to a simmer and reduce heat to low. Cook uncovered for 10 minutes, adding more beef broth if necessary to keep the meat from drying out.\n
+        \nMash the cooked potatoes:\n3. When the potatoes are done cooking (a fork can easily pierce), remove them from the pot and place them in a bowl with the remaining 4 Tbsp of butter. Mash with a fork or potato masher, and season with salt and pepper to taste.\n
+        \nLayer the meat mixture and mashed potatoes in a casserole dish:\n4. Preheat oven to 400°F. Spread the beef, onions, and vegetables (if using) in an even layer in a large baking dish (9x13 casserole). Spread the mashed potatoes over the top of the ground beef. Rough up the surface of the mashed potatoes with a fork so there are peaks that will get well browned. You can even use a fork to make creative designs in the mashed potatoes.\n
+        \nBake in oven:\n5. Place in a 400°F oven and cook until browned and bubbling, about 30 minutes. If necessary, broil for the last few minutes to help the surface of the mashed potatoes brown.
 
     </string>
 </resources>

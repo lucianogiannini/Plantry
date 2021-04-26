@@ -45,15 +45,15 @@ public class MainActivity extends AppCompatActivity {
             //int recipeId = cursor.getInt(0);
             //System.out.println(recipeId);
             String name = cursor.getString(1);
-            System.out.println(name);
+            //System.out.println(name);
             String steps = cursor.getString(2);
-            System.out.println(steps);
+            //System.out.println(steps);
             String level = cursor.getString(3);
-            System.out.println(level);
+            //System.out.println(level);
             String time = cursor.getString(4);
-            System.out.println(time);
+            //System.out.println(time);
             int imageId = cursor.getInt(5);
-            System.out.println(imageId);
+            //System.out.println(imageId);
             TextView recipe_of_the_week_textview = (TextView) findViewById(R.id.recipe_of_the_week_textview);
             recipe_of_the_week_textview.setText(name);
 

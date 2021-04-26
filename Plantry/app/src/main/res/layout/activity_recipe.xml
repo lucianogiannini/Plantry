@@ -58,14 +58,26 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         <TextView
+            android:id="@+id/recipe_items_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:text="temp_recipe_items"
+            android:paddingLeft="10dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:background="@color/white"/>
+        <TextView
             android:id="@+id/recipe_steps_textview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="16dp"
             android:text="temp_recipe_steps"
+            android:paddingLeft="10dp"
             android:textColor="@color/black"
-            android:textSize="20sp"
+            android:textSize="16sp"
             android:background="@color/white"/>
 
         <Button
