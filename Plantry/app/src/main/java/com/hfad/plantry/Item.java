@@ -1,3 +1,5 @@
+package com.hfad.plantry;
+
 import java.util.*;
 public class Item {
     private int recipe_id;

@@ -16,10 +16,14 @@ import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
+import java.util.ArrayList;
+
 public class RecipeActivity extends AppCompatActivity {
     public static final String recipeName = "NAME";
     private SQLiteDatabase db;
     private Cursor cursor;
+    private ArrayList <Item> recipeItems;
+    private ArrayList <Item> pantryItems;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,17 +61,23 @@ public class RecipeActivity extends AppCompatActivity {
 
             TextView recipe_items = (TextView)findViewById(R.id.recipe_items_textview);
             String recipeItems = "Ingredients: \n";
+
             cursor = db.query("RECIPEITEMS",
                     new String[]{"*"},
                     "RECIPE_ID = ?",
                     new String[]{Integer.toString(_id)}, null, null, null);
             cursor.moveToFirst();
-
+            int count = 0; //this is for adding items to the recipeItem array
             do{
                 String tempItemAllFields = "";
                 String tempName = cursor.getString(1);
                 double tempWeight = cursor.getDouble(2);
                 String tempType = cursor.getString(3);
+
+                ///recipeItems method to insert it in.
+
+
+                /////
                 if (!tempType.equals("ounces")) {
                     if (tempType.equals("teaspoon"))
                         tempItemAllFields += convertOuncesToTeaspoon(tempWeight) + " " + tempType + " of " + tempName + "\n";
@@ -110,6 +120,8 @@ public class RecipeActivity extends AppCompatActivity {
         Button add_recipe_to_shopping_list_button = (Button) findViewById(R.id.add_recipe_to_shopping_list_button);
         add_recipe_to_shopping_list_button.setEnabled(false);
 
+
+
         Intent intent = new Intent(this, ShoppingListActivity.class);
         startActivity(intent); //start new activity
     }
@@ -145,4 +157,6 @@ public class RecipeActivity extends AppCompatActivity {
         return cup; //returning string value of cups
 
     }
+
+
 }

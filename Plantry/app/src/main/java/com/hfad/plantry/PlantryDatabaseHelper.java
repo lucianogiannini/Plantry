@@ -2,6 +2,7 @@ package com.hfad.plantry;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
@@ -165,5 +166,6 @@ public class PlantryDatabaseHelper extends SQLiteOpenHelper {
         recipeItemValues.put("TYPE", type);
         db.insert("SHOPPINGLIST", null, recipeItemValues);
     }
+
 
 }
