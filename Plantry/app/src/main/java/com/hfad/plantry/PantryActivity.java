@@ -114,6 +114,17 @@ public class PantryActivity extends AppCompatActivity {
 
     }
 
+    public void goBack(View view){
+        Intent intent = new Intent(PantryActivity.this,MainActivity.class);
+        startActivity(intent);
+    }
+
+    public void addItem(View view){
+        Intent intent = new Intent(PantryActivity.this, AddItemActivity.class);
+        startActivity(intent);
+
+    }
+
 
     public String convertOuncesToTablespoon(double ounces) {
 

@@ -242,5 +242,9 @@ public class RecipeActivity extends AppCompatActivity {
 
     }
 
+    public void goBack(View view){
+        finish();
+    }
+
 
 }

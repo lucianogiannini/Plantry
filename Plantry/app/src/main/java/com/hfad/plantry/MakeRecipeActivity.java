@@ -13,4 +13,8 @@ public class MakeRecipeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_make_recipe);
     }
+
+    public void goBack(View view){
+        finish();
+    }
 }

@@ -88,6 +88,14 @@
             android:text="@string/add_shopping_list"
             android:onClick="addRecipeToShoppingList"/>
 
+        <Button
+            android:id="@+id/back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Go Back"
+            android:onClick="goBack"/>
+
     </LinearLayout>
 
 </androidx.core.widget.NestedScrollView>

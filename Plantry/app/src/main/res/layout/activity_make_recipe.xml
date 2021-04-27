@@ -5,7 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MakeRecipeActivity">
+    tools:context=".MakeRecipeActivity"
+    android:background="@color/black">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -86,6 +87,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/add_recipe_too"/>
+        <Button
+            android:id="@+id/button_back"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="goBack"
+            android:text="Go Back"/>
 
     </LinearLayout>
 

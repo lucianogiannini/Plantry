@@ -131,8 +131,7 @@ public class ShoppingListActivity extends AppCompatActivity {
         }
 
 
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent); //start new activity
+        finish();
     }
 
     public String convertOuncesToTablespoon(double ounces) {

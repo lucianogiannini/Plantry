@@ -2,10 +2,13 @@ package com.hfad.plantry;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.ContentValues;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -14,12 +17,14 @@ import android.widget.Toast;
 public class ItemActivity extends AppCompatActivity {
     private SQLiteDatabase db;
     private Cursor cursor;
+    public int id;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_item);
         int _id = (int) getIntent().getExtras().get("_id");
+        id = _id;
 
         SQLiteOpenHelper plantryDatabaseHelper = new PlantryDatabaseHelper(this);
         try {
@@ -58,6 +63,7 @@ public class ItemActivity extends AppCompatActivity {
                 }
                 else{
                     unit = 3;
+                    weight = Double.toString(tempWeight);
                 }
 
                 EditText weight_edittext = (EditText)findViewById(R.id.item_weight);
@@ -70,7 +76,76 @@ public class ItemActivity extends AppCompatActivity {
             Toast toast = Toast.makeText(this, "Database unavailable", Toast.LENGTH_SHORT); //Display a pop-up message if a SQLiteException is thrown
             toast.show();
         }
-    }//end on Create
+    }//end on Create\
+
+
+    public void deleteItem(View view){
+        SQLiteOpenHelper plantryDatabaseHelper = new PlantryDatabaseHelper(this);
+        try {
+            db = plantryDatabaseHelper.getWritableDatabase();
+            db.delete("PANTRY", "_id = ?", new String[]{Integer.toString(id)});
+            db.close();
+        }//end try
+        catch(Exception w){
+            Toast toast = Toast.makeText(this, "Database unavailable", Toast.LENGTH_SHORT); //Display a pop-up message if a SQLiteException is thrown
+            toast.show();
+        }
+
+        Intent intent = new Intent(ItemActivity.this, PantryActivity.class);
+        intent.putExtra("_id",id);
+        startActivity(intent);
+
+    }
+
+    public void updateItem(View view){
+
+        TextView title_textview = (TextView) findViewById(R.id.item_title);
+        String name = (String) title_textview.getText();
+
+        EditText weight_edittext = (EditText)findViewById(R.id.item_weight);
+        String weight = String.valueOf(weight_edittext.getText());
+        double weight_double= Double.parseDouble(weight);
+
+        Spinner unit_spinner = (Spinner)findViewById(R.id.unit_spinner);
+        String unit = unit_spinner.getSelectedItem().toString();
+
+         if(unit.equals("tablespoon"))
+        {
+
+            weight_double = convertTableSpoonToOunces(weight_double);
+        }
+        else if (unit.equals("teaspoon"))
+        {
+
+            weight_double = convertTeaspoonToOunces(weight_double);
+        }
+
+
+
+        SQLiteOpenHelper plantryDatabaseHelper = new PlantryDatabaseHelper(this);
+        try {
+            db = plantryDatabaseHelper.getWritableDatabase();
+
+            ContentValues itemValues = new ContentValues();
+            itemValues.put("TYPE", unit);
+            itemValues.put("WEIGHT",weight_double);
+
+            db.update("PANTRY",
+                    itemValues,
+                    "_id = ?",
+                    new String[] {Integer.toString(id)});
+            db.close();
+        }//end try
+        catch(Exception w){
+            Toast toast = Toast.makeText(this, "Database unavailable", Toast.LENGTH_SHORT); //Display a pop-up message if a SQLiteException is thrown
+            toast.show();
+        }
+
+        Intent intent = new Intent(ItemActivity.this, PantryActivity.class);
+        intent.putExtra("_id",id);
+        startActivity(intent);
+
+    }
 
     public String convertOuncesToTablespoon(double ounces) {
 
