@@ -13,8 +13,14 @@ public class Item {
         weight = 0.0;
         type = "";
     }
-    public Item(int recipe_id, String name, double weight, String tpye){
+    public Item(int recipe_id, String name, double weight, String type){
         this.recipe_id = recipe_id;
+        this.name = name;
+        this.weight = weight;
+        this.type = type;
+    }
+    public Item(String name, double weight, String type){
+        this.recipe_id = 0;
         this.name = name;
         this.weight = weight;
         this.type = type;

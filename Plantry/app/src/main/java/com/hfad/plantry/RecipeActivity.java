@@ -2,6 +2,7 @@ package com.hfad.plantry;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.ContentValues;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -22,8 +23,8 @@ public class RecipeActivity extends AppCompatActivity {
     public static final String recipeName = "NAME";
     private SQLiteDatabase db;
     private Cursor cursor;
-    private ArrayList <Item> recipeItems;
-    private ArrayList <Item> pantryItems;
+    private ArrayList <Item> recipeItemsList = new ArrayList<Item>(10);
+    private ArrayList <Item> pantryItemsList = new ArrayList<Item>(10);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,26 +71,30 @@ public class RecipeActivity extends AppCompatActivity {
             int count = 0; //this is for adding items to the recipeItem array
             do{
                 String tempItemAllFields = "";
+                int tempId = cursor.getInt(0);
                 String tempName = cursor.getString(1);
                 double tempWeight = cursor.getDouble(2);
                 String tempType = cursor.getString(3);
 
                 ///recipeItems method to insert it in.
-
-
+                Item tempItem = new Item(tempId, tempName, tempWeight, tempType);
+                recipeItemsList.add(tempItem);
                 /////
-                if (!tempType.equals("ounces")) {
+                if (!tempType.equals("ounces") && !tempType.equals("Eggs")) {
                     if (tempType.equals("teaspoon"))
                         tempItemAllFields += convertOuncesToTeaspoon(tempWeight) + " " + tempType + " of " + tempName + "\n";
                     else
                         tempItemAllFields += convertOuncesToTablespoon(tempWeight) + " " + tempType + " of " + tempName + "\n";
                 }//end if
                 else {
-                    if(tempWeight > 7.9) {
-                        tempItemAllFields += convertOuncesToCup(tempWeight) + " " + "cups" + " of " + tempName + "\n";
-                    }
-                    else{
-                        tempItemAllFields += tempWeight + " " + tempType + " of " + tempName + "\n";
+                    if (tempType.equals("ounces")) {
+                        if (tempWeight > 7.9) {
+                            tempItemAllFields += convertOuncesToCup(tempWeight) + " " + "cups" + " of " + tempName + "\n";
+                        } else {
+                            tempItemAllFields += tempWeight + " " + tempType + " of " + tempName + "\n";
+                        }
+                    }else{
+                        tempItemAllFields += tempWeight + " " + tempName + "\n";
                     }
                 }//end else
                 recipeItems += tempItemAllFields;
@@ -119,6 +124,85 @@ public class RecipeActivity extends AppCompatActivity {
     public void addRecipeToShoppingList(View view){
         Button add_recipe_to_shopping_list_button = (Button) findViewById(R.id.add_recipe_to_shopping_list_button);
         add_recipe_to_shopping_list_button.setEnabled(false);
+
+        //get items that user has from the PANTRY table
+        SQLiteOpenHelper plantryDatabaseHelper = new PlantryDatabaseHelper(this);
+        try {
+            db = plantryDatabaseHelper.getReadableDatabase();
+            cursor = db.query("PANTRY",
+                    new String[]{"*"},
+                    null,
+                    null, null, null, null);
+            if(cursor.moveToFirst()) {
+                do {
+                    String tempName = cursor.getString(0);
+                    double tempWeight = cursor.getDouble(1);
+                    String tempType = cursor.getString(2);
+
+                    ///recipeItems method to insert it in.
+                    Item tempItem = new Item(tempName, tempWeight, tempType);
+                    pantryItemsList.add(tempItem);
+                } while (cursor.moveToNext());
+            }
+
+            cursor.close();
+            db.close();
+        }catch(Exception w){
+            Toast toast = Toast.makeText(this, "Database unavailable", Toast.LENGTH_SHORT); //Display a pop-up message if a SQLiteException is thrown
+            toast.show();
+        }
+        //
+
+        //compare recipeItemsList with pantryItemsList
+
+
+        for(int i = 0; i < pantryItemsList.size(); i++){
+            boolean got_it = false;
+            for(int j = 0; j < recipeItemsList.size(); j++){
+                if(pantryItemsList.get(i).getName().toLowerCase().equals(recipeItemsList.get(j).getName().toLowerCase())){
+                    System.out.println(pantryItemsList.get(i).getName().toLowerCase());
+                    System.out.println(recipeItemsList.get(j).getName().toLowerCase());
+                    System.out.println();
+                    got_it = true;
+                    if(pantryItemsList.get(i).getWeight() <= recipeItemsList.get(j).getWeight()){
+                        try {
+                            double amount_need_to_buy = recipeItemsList.get(j).getWeight() - pantryItemsList.get(i).getWeight();
+                            ContentValues cv = new ContentValues();
+                            cv.put("_id",1);
+                            cv.put("NAME",pantryItemsList.get(i).getName());
+                            cv.put("WEIGHT",amount_need_to_buy);
+                            cv.put("TYPE",pantryItemsList.get(i).getType());
+                            db = plantryDatabaseHelper.getWritableDatabase();
+                            db.insert("SHOPPINGLIST",null,cv);
+                            db.close();
+                        }
+                        catch (Exception e){
+                            Toast toast = Toast.makeText(this, "Database unavailable", Toast.LENGTH_SHORT); //Display a pop-up message if a SQLiteException is thrown
+                            toast.show();
+                        }
+                    }
+                }
+
+            }
+            if(!got_it){
+                try {
+                    ContentValues cv = new ContentValues();
+                    cv.put("_id",1);
+                    cv.put("NAME",recipeItemsList.get(i).getName());
+                    cv.put("WEIGHT",recipeItemsList.get(i).getWeight());
+                    cv.put("TYPE",recipeItemsList.get(i).getType());
+                    db = plantryDatabaseHelper.getWritableDatabase();
+                    db.insert("SHOPPINGLIST",null,cv);
+                    db.close();
+                }
+                catch (Exception e){
+                    Toast toast = Toast.makeText(this, "Database unavailable", Toast.LENGTH_SHORT); //Display a pop-up message if a SQLiteException is thrown
+                    toast.show();
+                }
+            }
+
+
+        }
 
 
 

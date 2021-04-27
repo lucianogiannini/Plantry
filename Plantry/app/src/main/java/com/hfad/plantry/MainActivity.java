@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
                     null,
                     null, null, null, null);
             Random rng = new Random();
-            int randomInt = rng.nextInt(6)+1;
+            int randomInt = rng.nextInt(5)+1;
             cursor.moveToPosition(randomInt);
 
             //insertRecipe(db,"Chicago-Style Deep Dish Pizza with Italian Sausage",String.valueOf(R.string.Deep_Dish),"MEDIUM","02:55:00",R.drawable.chicago_style_deep_dish);
@@ -87,11 +87,14 @@ public class MainActivity extends AppCompatActivity {
                         recipe_of_the_week_text += convertOuncesToTablespoon(tempWeight) + " " + tempType + " of " + tempName + "\n";
                 }//end if
                 else {
-                    if(tempWeight > 7.9) {
-                        recipe_of_the_week_text += convertOuncesToCup(tempWeight) + " " + "cups" + " of " + tempName + "\n";
-                    }
-                    else{
-                        recipe_of_the_week_text += tempWeight + " " + tempType + " of " + tempName + "\n";
+                    if (tempType.equals("ounces")) {
+                        if (tempWeight > 7.9) {
+                            recipe_of_the_week_text += convertOuncesToCup(tempWeight) + " " + "cups" + " of " + tempName + "\n";
+                        } else {
+                            recipe_of_the_week_text += tempWeight + " " + tempType + " of " + tempName + "\n";
+                        }
+                    }else{
+                        recipe_of_the_week_text += tempWeight + " " + tempName + "\n";
                     }
                 }//end else
             }//end for loop
@@ -197,11 +200,14 @@ public class MainActivity extends AppCompatActivity {
                             recipe_text += convertOuncesToTablespoon(tempWeight) + " " + tempType + " of " + tempName + "\n";
                     }//end if
                     else {
-                        if(tempWeight > 7.9) {
-                            recipe_text += convertOuncesToCup(tempWeight) + " " + "cups" + " of " + tempName + "\n";
-                        }
-                        else{
-                            recipe_text += tempWeight + " " + tempType + " of " + tempName + "\n";
+                        if (tempType.equals("ounces")) {
+                            if (tempWeight > 7.9) {
+                                recipe_text += convertOuncesToCup(tempWeight) + " " + "cups" + " of " + tempName + "\n";
+                            } else {
+                                recipe_text += tempWeight + " " + tempType + " of " + tempName + "\n";
+                            }
+                        }else{
+                            recipe_text += tempWeight + " " + tempName + "\n";
                         }
                     }//end else
                 }//end for loop
