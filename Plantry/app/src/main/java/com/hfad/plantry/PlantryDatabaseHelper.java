@@ -25,7 +25,7 @@ public class PlantryDatabaseHelper extends SQLiteOpenHelper {
 
             db.execSQL("Create Table RECIPE (" + "_id INTEGER PRIMARY KEY AUTOINCREMENT," + " NAME TEXT,"+"STEPS TEXT," + "LEVEL TEXT," + "TIME TEXT," + "IMAGE_RESOURCE_ID INTEGER," + "IMAGE_RESOURCE_ID_LARGE INTEGER);"); //this creates the RECIPE table
             db.execSQL("Create Table RECIPEITEMS (" + "RECIPE_ID INTEGER," + " NAME TEXT," + "WEIGHT DOUBLE," + "TYPE TEXT, "+"FOREIGN KEY(RECIPE_ID) REFERENCES RECIPE(_id));"); //this creates the RECIPEITEMS table
-            db.execSQL("Create Table PANTRY (" + " NAME TEXT," + "WEIGHT DOUBLE," + "TYPE TEXT);");
+            db.execSQL("Create Table PANTRY (" + "_id INTEGER PRIMARY KEY AUTOINCREMENT," + " NAME TEXT," + "WEIGHT DOUBLE," + "TYPE TEXT);");
             db.execSQL("Create Table SHOPPINGLIST (" + "_id INTEGER," + " NAME TEXT," + "WEIGHT DOUBLE," + "TYPE TEXT);");
 
             insertRecipe(db,"Chicago-Style Deep Dish Pizza with Italian Sausage",String.valueOf(R.string.Deep_Dish),"MEDIUM","02:55:00",R.drawable.chicago_style_deep_dish_small,R.drawable.chicago_style_deep_dish);

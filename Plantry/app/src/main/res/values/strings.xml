@@ -17,6 +17,7 @@
     <string name="add_shopping_list">Add Recipe To Your Shopping List</string>
     <string name="shopping_list1">Your Shopping List</string>
 
+
     <string-array name="recipe_list">
         <item>Temp Recipe 1</item>
         <item>Temp Recipe 2</item>
@@ -31,6 +32,7 @@
         <item>ounces</item>
         <item>tablespoon</item>
         <item>teaspoon</item>
+        <item>Eggs</item>
     </string-array>
     <string name="Deep_Dish">Mix the dough:\n1. In the bowl of a stand mixer fitted with the paddle attachment on low speed, mix the flour, cornmeal, salt, yeast, and sugar until blended. Add 1/2 cup plus 2 tablespoons of room temperature water and mix until combined. If the dough seems dry, add an additional tablespoon or two of water. The dough should feel soft and very slightly sticky, not stiff or dry.\n
         \nKnead the dough:\n2. Switch to the dough hook and knead the dough at low speed for 5 to 7 minutes, or until it is smooth and elastic. Drizzle 1 teaspoon olive oil in a clean bowl. Form the dough into a ball and place it in the bowl, turning to coat all over with oil. Cover with plastic wrap and let rise for 1 hour, or until puffy.\n
