@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
                     null, null, null, null);
             Random rng = new Random();
             int randomInt = rng.nextInt(5)+1;
-            cursor.moveToPosition(randomInt);
+            cursor.moveToPosition(5);
 
             //insertRecipe(db,"Chicago-Style Deep Dish Pizza with Italian Sausage",String.valueOf(R.string.Deep_Dish),"MEDIUM","02:55:00",R.drawable.chicago_style_deep_dish);
             //int recipeId = cursor.getInt(0);
